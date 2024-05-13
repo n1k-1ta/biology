@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioClever</title>
+    <link rel="shortcut icon" href="img/icon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id="navbar">
+        <ul class="nav justify-content-center" style="--bs-nav-link-color: #004827;">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#main-forwhat"><strong>Что вас ждет?</strong></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#footer"><strong>Интересные факты</strong></a>
+            </li>
+        </ul>
+    </header>
+
+    <main>
+        <div class="head-text" data-aos="zoom-in">
+            <div class="container">
+                <img src="img/icon.svg" class="rounded mx-auto d-block img-head" alt="..." style=" margin-bottom: 3vh; max-width: 30%;">
+                <h1 style="font-size: 2.2em; color: #004827;"><strong>BioClever: Учимся с Умом в Мире Биологии!</strong></h1>
+                <p style="font-size: 1em; font-weight: 600; color: #004827; margin-bottom: 3vh;"> Образовательные материалы по биологии для учеников 5-9 классов. Изучайте, экспериментируйте и открывайте для себя удивительный мир живой природы!</p>
+                <button type="button" class="btn btn-primary" style="--bs-btn-bg: #F6D8CE; --bs-btn-border-color: #ffffff; --bs-btn-hover-bg: #d49197;">
+                    <a href="#main-forwhat" style="color: #004827; text-decoration: none;"><strong>Начать изучение</strong></a>
+                </button>                
+            </div>
+        </div>
+
+        <div class="main-forwhat"  style="background-color: #004827; color: #ffffff;" id="main-forwhat">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-md-3 g-4" style="padding-top: 5vh; padding-bottom: 5vh;" id="main-forwhat">
+                    <div class="col" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                        <div class="card h-100">
+                            <img src="img/pic1.svg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Небольшой тест</h5>
+                                <p class="card-text">Интересный тест с подсказками для всех классов, проверь свои знания!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                        <div class="card h-100">
+                            <img src="./img/pic2.svg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Задачи для дома</h5>
+                                <p class="card-text">Выбери одну из 5 задач и углубись в мир биологии!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                        <div class="card h-100">
+                            <img src="./img/pic3.svg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Наслаждайся процессом</h5>
+                                <p class="card-text">Саморазвивайся в биологии! Никогда не поздно открыть для себя что-то новое!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container" style="margin-top: 1vh; padding-bottom: 5vh;">
+                <div class="class-selection" >
+                    <h2 style="margin-bottom: 5vh;"  data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" id="class-selection">Выберите ваш класс:</h2>
+                    <div class="border-col" style="border: #ffffff solid 2px; border-radius: 20px;" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                        <div class="row row-cols-1 row-cols-md-5 g-4" style="padding-top: 2vh; padding-bottom: 2vh;">
+                            <div class="col">
+                                <button type="button" class="btn btn-primary class-btn bigger-btn" style="background-color: #ffffff; border: #ffffff; --bs-btn-hover-color: #d49197;" data-class="5">5 класс</button>
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn-primary class-btn bigger-btn" style="background-color: #ffffff; border: #ffffff; --bs-btn-hover-color: #d49197;" data-class="6">6 класс</button>
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn-primary class-btn bigger-btn" style="background-color: #ffffff; border: #ffffff; --bs-btn-hover-color: #d49197;" data-class="7">7 класс</button>
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn-primary class-btn bigger-btn" style="background-color: #ffffff; border: #ffffff; --bs-btn-hover-color: #d49197;" data-class="8">8 класс</button>
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn-primary class-btn bigger-btn" style="background-color: #ffffff; border: #ffffff; --bs-btn-hover-color: #d49197;" data-class="9">9 класс</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <footer style="padding-bottom: 5vh;">
+        <div class="container">
+            <footer id="footer">
+                <h2 style="text-align: center; padding-bottom: 3vh;" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"><strong>Интересные факты</strong></h2>
+                <div id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                    </div>
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+                            <img src="img/list-pic1.svg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/list-pic2.svg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/list-pic3.svg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/list-pic4.svg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/list-pic5.svg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/list-pic6.svg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/list-pic7.svg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </footer>
+        </div>
+    </footer>
+    
+
+    <script src="script/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

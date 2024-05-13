@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioClever</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <style>
+
+        body{
+            font-family: "Comfortaa", sans-serif;
+        }
+
+        .card h2{
+            color: #ffffff;
+            font-size: 2em;
+        }
+
+        .card {
+            background-color: #004827 ;
+            border: 1px solid #004827;
+            color: white;
+            margin: 20px auto;
+            width: 80%;
+            padding: 20px;
+            font-size: 1.2em;
+            
+        }
+
+
+        .btn {
+            font-family: "Comfortaa", sans-serif;
+            background-color: #ffffff;
+            color: #004827;
+            border: none;
+            padding: 10px 20px;
+
+            cursor: pointer;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #F6D8CE;
+            border-radius: 50%;
+            outline: none;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        input[type="radio"]:checked {
+            background-color: #F6D8CE;
+        }
+
+        input[type="radio"]:checked::before {
+            content: '';
+            display: block;
+            width: 10px;
+            height: 10px;
+            margin: 2px;
+            border-radius: 50%;
+            background-color: #F6D8CE;
+        }
+
+        input[type="radio"]:hover {
+            background-color: #F6D8CE;
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .answers {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        button {
+            border-radius: 10px;
+            font-weight: 600;
+            margin-top: 3vh;
+            text-align: center;
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+
+        .modal-content {
+            background-color: #ffffff;
+            color: #004827;
+            border: 2px solid #004827;
+        }
+        .modal-header {
+            border-bottom: 2px solid #004827;
+            color: #004827;
+        }
+        .modal-body,
+        .modal-footer {
+            color: #004827;
+        }
+        .modal-footer button {
+            color: #ffffff;
+            background-color: #004827;
+        }
+        .modal-header .btn-close {
+            color: #004827;
+        }
+
+        button {
+            border-radius: 10px;
+            font-weight: 600;
+            margin-top: 3vh;
+            text-align: center;
+            width: 25%; 
+            height: 80px;
+            background-color: #F6D8CE; 
+            color: #004827; 
+            margin-left: auto; 
+            margin-right: auto; 
+        }
+
+        @media only screen and (max-width: 658px) {
+            button {
+                font-size: 0.5em; 
+            }
+        }
+
+        @media only screen and (max-width: 658px) {
+            .btn {
+                font-size: 0.5em; 
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            button {
+                width: 35%;
+                font-size: 0.5em; 
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .btn {
+                font-size: 0.5em; 
+            }
+        }
+
+    </style>
+</head>
+<body style="background-color: #004827; color: rgb(255, 255, 255);">
+    <div class="container">
+        <h1 class="big-text" style="color: #ffffff; padding-top: 8vh; padding-bottom: 4vh;">6 Класс</h1>
+        <h1 class="big-text" style="color: #ffffff; padding-bottom: 4vh;">Тест</h1>
+    </div>
+    <main>
+        <div class="card" style="margin: 20px auto; width: 80%;" data-aos="fade-up">
+            <h2 style="margin: 0 auto; margin-bottom: 3vh;">1 вопрос</h2>
+            <p style="margin: 0 auto; margin-bottom: 3vh;">Какое из перечисленных является химическим элементом, основным строительным блоком живых организмов?</p>
+            <div class="answers">
+                <label><input type="radio" name="question1" value="A"> A. Углерод</label>
+                <label><input type="radio" name="question1" value="B"> B. Железо</label>
+                <label><input type="radio" name="question1" value="C"> C. Азот</label>
+                <label><input type="radio" name="question1" value="D"> D. Кислород</label>
+            </div>
+            <button onclick="checkAnswer('question1', 'A')">Проверка</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#hintModal1" style="--bs-btn-hover-bg: #F6D8CE; --bs-btn-hover-color: #f00;"><strong>Подсказать?</strong></button>
+            <div class="modal fade" id="hintModal1" tabindex="-1" aria-labelledby="hintModalLabel1" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="hintModalLabel1">Подсказка</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Этот элемент является основой органических соединений, включая белки, жиры и углеводы</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Я понял</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card" style="margin: 20px auto; width: 80%;" data-aos="fade-up">
+            <h2 style="margin: 0 auto; margin-bottom: 3vh;">2 вопрос</h2>
+            <p style="margin: 0 auto; margin-bottom: 3vh;">Какой процесс отвечает за передачу генетической информации от родителей к потомству?</p>
+            <div class="answers">
+                <label><input type="radio" name="question2" value="A"> A. Регенерация</label>
+                <label><input type="radio" name="question2" value="B"> B. Митоз</label>
+                <label><input type="radio" name="question2" value="C"> C. Мутация</label>
+                <label><input type="radio" name="question2" value="D"> D. Мейоз</label>
+            </div>
+            <button onclick="checkAnswer('question2', 'D')">Проверка</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#hintModal2" style="--bs-btn-hover-bg: #F6D8CE; --bs-btn-hover-color: #f00;"><strong>Подсказать?</strong></button>
+            <div class="modal fade" id="hintModal2" tabindex="-1" aria-labelledby="hintModalLabel2" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="hintModalLabel2">Подсказка</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Этот процесс происходит при образовании сперматозоидов и яйцеклеток</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Я понял</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card" style="margin: 20px auto; width: 80%;" data-aos="fade-up">
+            <h2 style="margin: 0 auto; margin-bottom: 3vh;">3 вопрос</h2>
+            <p style="margin: 0 auto; margin-bottom: 3vh;">Какая стадия метаморфоза характерна для бабочек и жуков?</p>
+            <div class="answers">
+                <label><input type="radio" name="question3" value="A"> A. Личинка</label>
+                <label><input type="radio" name="question3" value="B"> B. Куколка</label>
+                <label><input type="radio" name="question3" value="C"> C. Яйцо</label>
+                <label><input type="radio" name="question3" value="D"> D. Взрослая особь</label>
+            </div>
+            <button onclick="checkAnswer('question3', 'B')">Проверка</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#hintModal3" style="--bs-btn-hover-bg: #F6D8CE; --bs-btn-hover-color: #f00;"><strong>Подсказать?</strong></button>
+            <div class="modal fade" id="hintModal3" tabindex="-1" aria-labelledby="hintModalLabel3" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header"4
+                            <h5 class="modal-title" id="hintModalLabel3">Подсказка</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>На этой стадии происходит превращение личинки во взрослую особь</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Я понял</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card" style="margin: 20px auto; width: 80%;" data-aos="fade-up">
+            <h2 style="margin: 0 auto; margin-bottom: 3vh;">4 вопрос</h2>
+            <p style="margin: 0 auto; margin-bottom: 3vh;">Какая часть клетки отвечает за производство энергии?</p>
+            <div class="answers">
+                <label><input type="radio" name="question4" value="A"> A. Ядро</label>
+                <label><input type="radio" name="question4" value="B"> B. Мембрана</label>
+                <label><input type="radio" name="question4" value="C"> C. Митохондрия</label>
+                <label><input type="radio" name="question4" value="D"> D. Хлоропласт</label>
+            </div>
+            <button onclick="checkAnswer('question4', 'C')">Проверка</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#hintModal4" style="--bs-btn-hover-bg: #F6D8CE; --bs-btn-hover-color: #f00;"><strong>Подсказать?</strong></button>
+            <div class="modal fade" id="hintModal4" tabindex="-1" aria-labelledby="hintModalLabel4" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="hintModalLabel4">Подсказка</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Эта структура называется "энергетической фабрикой" клетки</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Я понял</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card" style="margin: 20px auto; width: 80%;" data-aos="fade-up">
+            <h2 style="margin: 0 auto; margin-bottom: 3vh;">5 вопрос</h2>
+            <p style="margin: 0 auto; margin-bottom: 3vh;">Как называется процесс, при котором растения используют энергию света для создания органических соединений?</p>
+            <div class="answers">
+                <label><input type="radio" name="question5" value="A"> A. Дыхание</label>
+                <label><input type="radio" name="question5" value="B"> B. Ферментация</label>
+                <label><input type="radio" name="question5" value="C"> C. Фотосинтез</label>
+                <label><input type="radio" name="question5" value="D"> D. Осмотический процесс</label>
+            </div>
+            <button onclick="checkAnswer('question5', 'C')">Проверка</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#hintModal5" style="--bs-btn-hover-bg: #F6D8CE; --bs-btn-hover-color: #f00;"><strong>Подсказать?</strong></button>
+            <div class="modal fade" id="hintModal5" tabindex="-1" aria-labelledby="hintModalLabel5" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="hintModalLabel5">Подсказка</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Этот процесс происходит в зеленых частях растений и включает захват углекислого газа</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Я понял</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <footer style="color: #004827; margin-top: 3vh; font-size: 1.2em; margin-bottom: 0vh;">
+        <div class="container">
+            <h1 class="big-text" style="color: #004827; padding-bottom: 4vh;" data-aos="fade-up">Задачи</h1>
+            <h1 class="big-text" style="color: #004827; padding-bottom: 4vh;" data-aos="fade-up">Выбери одну из предложенных задач</h1>
+            
+            <div class="tasks" data-aos="fade-up" style="text-align: left; margin-bottom: 5vh;">
+                <ol>
+                    <li>
+                        <strong>Исследование местной флоры и фауны:</strong> Прогуляйся по своему району или парку и сделай заметки о различных растениях, животных и насекомых, которых ты увидишь. Запиши, где они обитают, их особенности и поведение. Попробуй определить, какие из них взаимодействуют между собой, и как это влияет на окружающую среду.
+                    </li>
+                    <li>
+                        <strong>Эксперимент с генетикой:</strong> Проведи генетический эксперимент с растениями. Вырасти две группы одного вида растений из семян, различающихся по генетическим признакам. Например, можно использовать горох разных цветов цветков. Запиши результаты роста и узнай, какие генетические законы они подтверждают.
+                    </li>
+                    <li>
+                        <strong>Исследование экосистемы:</strong> Изучи экосистему близлежащего леса или парка. Запиши разнообразие живых организмов, их взаимодействие и роль каждого в экосистеме. Обрати внимание на влияние человеческой деятельности на это биоразнообразие.
+                    </li>
+                    <li>
+                        <strong>Чтение книги о дарвинизме:</strong> Прочитай книгу о теории эволюции Чарльза Дарвина и ее значение для современной науки. Сделай краткое изложение основных идей Дарвина и расскажи, как они изменили представление о мире.
+                    </li>
+                    <li>
+                        <strong>Эксперимент с животными:</strong> Проведи эксперимент по изучению поведения животных. Например, наблюдай за поведением мышей в разных условиях: при наличии еды и без нее, в темноте и при свете, с другими мышами и в одиночестве. Сделай выводы о том, какие факторы влияют на поведение животных.
+                    </li>
+                </ol>
+            </div>
+    
+            <h1 class="big-text" style="color: #004827; padding-bottom: 2vh; margin-bottom: 0;">Покажи результат учителю или родителям!</h1>
+            
+        </div>
+    </footer>
+
+
+
+
+    <script>
+        function checkAnswer(questionName, correctAnswer) {
+            var selectedAnswer = document.querySelector('input[name="' + questionName + '"]:checked');
+            if (!selectedAnswer) {
+                alert('Ответ не выбран');
+                return;
+            }
+            if (selectedAnswer.value === correctAnswer) {
+                alert('Ответ верный, так держать!');
+            } else {
+                alert('Неправильно, попробуй еще. (Если ттрудно - обратись к подсказке)');
+            }
+        }
+    </script>
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+    
+</body>
+</html>
